@@ -1,4 +1,4 @@
-# Implementation Vue.js
+# Vue.js Implementation
 
 Init the npm
 
