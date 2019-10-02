@@ -14,7 +14,7 @@ npm i webpack -D
 
 In the `package.json` inside the `script` objet insert the line below
 
-```
+```js
 "webpack": "webpack --mode development",
 ```
 
@@ -50,7 +50,7 @@ npm i vue vue-template-compiler vue-loader babel-loader babel-preset-env -D
 
 At root path create a file with name `.babelrc` to configure babel with the code below
 
-```
+```js
 {
     "presets": [
         "env"
@@ -60,7 +60,7 @@ At root path create a file with name `.babelrc` to configure babel with the code
 
 Configure the `webpack.config.js` with the `resolve` after `output` to Vue like below
 
-```
+```js
 resolve: {
     alias: {
         'vue$': 'vue/dist/vue.esm.js'
@@ -71,7 +71,7 @@ resolve: {
 
 Configure the `webpack.config.js` with the `rules` to Vue after `resolve` like below
 
-```
+```js
 module: {
     rules: [
         {
@@ -92,13 +92,13 @@ module: {
 
 At the first line of `webpack.config.js` import the `vue-loader` like below
 
-```
+```js
 const { VueLoaderPlugin } = require('vue-loader');
 ```
 
 And set the `plugin` with `VueLoaderPlugin` after `module` like below
 
-```
+```js
 plugins: [
     new VueLoaderPlugin()
 ]
@@ -106,12 +106,12 @@ plugins: [
 
 In the `configuration js vue` file (twebpackhe file in the entry option of webpack configuration) import the Vue.js
 
-```
+```js
 import Vue from 'vue';
 ```
 
 In the `configuration js vue` file configure the component tag like below
-```
+```js
 Vue.component('the-tag-html', require('./path/to/vue/file.vue').default);
 ```
 
@@ -119,7 +119,7 @@ Change the `the-tag-html` to your choice and in the `require` set the path to yo
 
 Still in the `configuration js vue` file initiate the Vue
 
-```
+```js
 new Vue({
   el: '#app'
 });
@@ -127,7 +127,7 @@ new Vue({
 
 In the `package.json` inside the `script` objet insert the code below
 
-```
+```js
 "prod": "webpack --mode production",
 "watch": "webpack --mode development --watch",
 ```
