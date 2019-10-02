@@ -1,4 +1,4 @@
-# Implementation Vue.js in PHP Project
+# Implementation Vue.js
 
 Init the npm
 
